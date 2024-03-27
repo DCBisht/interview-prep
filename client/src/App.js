@@ -31,7 +31,7 @@ const App = () => {
               <Route path="/users/:id" element={<Profile />} />
               <Route path="/auth/verify" element={<VerifyAccount />} />
               {
-                user?.role === 'admin' && (
+                 (
                   <Route path="/admin" element={<AdminDashboard />} />
                 )
               }

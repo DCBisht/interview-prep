@@ -115,7 +115,7 @@ const SignupForm = ({ setIsModalVisible }) => {
             rules={[
               {
                 // password Should be combination of numbers & alphabets and one special character
-                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/,
+                pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
                 message: 'Password must contain at least one lowercase letter, uppercase letter, number, and special character',
               },
               {

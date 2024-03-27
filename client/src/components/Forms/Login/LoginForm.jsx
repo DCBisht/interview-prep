@@ -27,6 +27,7 @@ const LoginForm = ({ handleOk }) => {
 
   const onFinish = async () => {
     try {
+      console.log(user);
       const { data: { data: { user } } } = await axios.post('/api/login', { email, password });
       dispatch(setUser(user));
       handleOk();
@@ -81,7 +82,7 @@ const LoginForm = ({ handleOk }) => {
         name="password"
         rules={[
           {
-            pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$/,
+            pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
             message: 'Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character',
           },
           {

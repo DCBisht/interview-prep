@@ -108,7 +108,7 @@ const AdminDashboard = () => {
         <Footer
           className="dashboard__footer"
         >
-          Nova ©2022 Created by Nova Team
+          DC Bisht
         </Footer>
       </Layout>
     </Layout>
